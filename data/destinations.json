@@ -1,35 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Paris",
-    "clues": [
-      "This city is home to a famous tower that sparkles every night.",
-      "Known as the 'City of Love' and a hub for fashion and art."
-    ],
-    "funFact": "The Eiffel Tower was supposed to be dismantled after 20 years but was saved because it was useful for radio transmissions!",
-    "trivia": "This city is famous for its croissants and macarons. Bon appétit!"
-  },
-  {
-    "id": 2,
-    "name": "Tokyo",
-    "clues": [
-      "This city has the busiest pedestrian crossing in the world.",
-      "You can visit an entire district dedicated to anime, manga, and gaming."
-    ],
-    "funFact": "Tokyo was originally a small fishing village called Edo before becoming the bustling capital it is today!",
-    "trivia": "The city has over 160,000 restaurants, more than any other city in the world."
-  },
-  {
-    "id": 3,
-    "name": "New York",
-    "clues": [
-      "Home to a green statue gifted by France in the 1800s.",
-      "Nicknamed 'The Big Apple' and known for its Broadway theaters."
-    ],
-    "funFact": "The Statue of Liberty was originally a copper color before oxidizing to its iconic green patina.",
-    "trivia": "New York City has 468 subway stations, making it one of the most complex transit systems in the world."
-  },
-  {
     "city": "Kyoto",
     "country": "Japan",
     "clues": [
@@ -1369,6 +1339,363 @@
     "trivia": [
       "Pike Place Market is a famous public market in Seattle.",
       "Seattle is named after Chief Si'ahl, a Native American leader."
+    ],
+    "id": 100
+  },
+  {
+    "city": "Kotor",
+    "country": "Montenegro",
+    "clues": [
+      "A walled city nestled on a stunning bay.",
+      "Explore ancient streets and dramatic mountains."
+    ],
+    "fun_fact": [
+      "Kotor's Bay is a UNESCO World Heritage Site.",
+      "The city walls offer breathtaking panoramic views."
+    ],
+    "trivia": [
+      "Kotor has a rich history dating back to Roman times.",
+      "The Bay of Kotor is one of the deepest and most southern fjords in the world."
+    ],
+    "id": 83
+  },
+  {
+    "city": "Tegucigalpa",
+    "country": "Honduras",
+    "clues": [
+      "Central American capital with a rich history.",
+      "Nestled in a mountainous valley, known for its colonial architecture."
+    ],
+    "fun_fact": [
+      "Tegucigalpa is one of the few capital cities without a subway system.",
+      "The city's name comes from a Nahuatl phrase meaning 'silver hills'."
+    ],
+    "trivia": [
+      "Tegucigalpa houses the National Museum of History.",
+      "The city is home to several universities and educational institutions."
+    ],
+    "id": 84
+  },
+  {
+    "city": "Zhangjiajie",
+    "country": "China",
+    "clues": [
+      "Inspiration for the Hallelujah Mountains in Avatar.",
+      "Home to towering sandstone pillars and breathtaking scenery."
+    ],
+    "fun_fact": [
+      "The area boasts unique flora and fauna found nowhere else.",
+      "Millions of tourists visit its national park annually."
+    ],
+    "trivia": [
+      "Zhangjiajie National Forest Park is a UNESCO World Heritage Site.",
+      "The city's name translates to 'Family of Zhang's in a Border Region'."
+    ],
+    "id": 85
+  },
+  {
+    "city": "San Juan",
+    "country": "Puerto Rico",
+    "clues": [
+      "Known for its vibrant culture and history",
+      "A Caribbean gem with stunning beaches and forts"
+    ],
+    "fun_fact": [
+      "It's the oldest continuously inhabited European-established settlement in Puerto Rico.",
+      "The city boasts impressive colonial architecture that has survived centuries."
+    ],
+    "trivia": [
+      "San Juan is a popular cruise ship destination.",
+      "The city's patron saint is San Juan Bautista."
+    ],
+    "id": 86
+  },
+  {
+    "city": "Chefchaouen",
+    "country": "Morocco",
+    "clues": [
+      "A blue-washed haven in the Rif Mountains.",
+      "Wander its labyrinthine alleys, a photographer's paradise."
+    ],
+    "fun_fact": [
+      "Its distinctive blue-washed buildings are believed to repel mosquitos.",
+      "The city is a popular destination for hiking and exploring the surrounding Rif Mountains."
+    ],
+    "trivia": [
+      "The exact origin of the city's blue color is debated but believed to be related to Jewish traditions.",
+      "Chefchaouen was founded in 1471."
+    ],
+    "id": 87
+  },
+  {
+    "city": "Marrakesh",
+    "country": "Morocco",
+    "clues": [
+      "A vibrant city of souks and spices.",
+      "Known for its enchanting Djemaa el-Fna square."
+    ],
+    "fun_fact": [
+      "The city's name is derived from the Berber word 'Murrākus'.",
+      "Marrakesh is one of the four Imperial Cities of Morocco."
+    ],
+    "trivia": [
+      "The Koutoubia Mosque is Marrakesh's largest mosque.",
+      "The Bahia Palace is a stunning example of Moroccan architecture."
+    ],
+    "id": 88
+  },
+  {
+    "city": "Jaipur",
+    "country": "India",
+    "clues": [
+      "The Pink City, a vibrant jewel of Rajasthan.",
+      "Home to majestic forts and palaces, a regal experience."
+    ],
+    "fun_fact": [
+      "Jaipur's Hawa Mahal, or Palace of Winds, was designed to allow royal women to observe street life unseen.",
+      "The city's architecture is a blend of Rajput and Mughal styles, showcasing a rich history."
+    ],
+    "trivia": [
+      "Jaipur is known for its stunning jewelry, textiles, and handicrafts.",
+      "The Jantar Mantar, an astronomical observatory, is a unique landmark in Jaipur."
+    ],
+    "id": 89
+  },
+  {
+    "city": "Dubrovnik",
+    "country": "Croatia",
+    "clues": [
+      "Known as the 'Pearl of the Adriatic'",
+      "A walled city, a UNESCO World Heritage site"
+    ],
+    "fun_fact": [
+      "Served as a filming location for 'Game of Thrones'",
+      "Has a rich maritime history dating back to the 7th century"
+    ],
+    "trivia": [
+      "Its city walls are almost entirely intact",
+      "The Rector's Palace is a stunning example of Gothic architecture"
+    ],
+    "id": 98
+  },
+  {
+    "city": "Valletta",
+    "country": "Malta",
+    "clues": [
+      "A city built by the Knights of St. John.",
+      "A UNESCO World Heritage site boasting stunning architecture."
+    ],
+    "fun_fact": [
+      "Valletta is one of the smallest capital cities in the European Union.",
+      "The city is built on a peninsula, making it naturally defensible."
+    ],
+    "trivia": [
+      "Valletta's fortifications are a masterpiece of military architecture.",
+      "The city hosted the 2018 European Capital of Culture."
+    ],
+    "id": 91
+  },
+  {
+    "city": "Stone Town",
+    "country": "Tanzania",
+    "clues": [
+      "A UNESCO World Heritage site on an island...",
+      "A maze of narrow streets and ancient architecture..."
+    ],
+    "fun_fact": [
+      "Stone Town's architecture blends African, Arab, Indian, and European influences.",
+      "The city played a significant role in the spice trade."
+    ],
+    "trivia": [
+      "The House of Wonders is a prominent landmark in Stone Town.",
+      "Stone Town was once a major center for the slave trade."
+    ],
+    "id": 93
+  },
+  {
+    "city": "Palermo",
+    "country": "Italy",
+    "clues": [
+      "A Sicilian capital, rich in history and culture.",
+      "Explore bustling markets and ancient catacombs."
+    ],
+    "fun_fact": [
+      "Palermo's street food scene is legendary.",
+      "The city boasts numerous stunning churches and cathedrals."
+    ],
+    "trivia": [
+      "Palermo's Teatro Massimo is one of Europe's largest opera houses.",
+      "The city's Norman Palace is a UNESCO World Heritage site."
+    ],
+    "id": 94
+  },
+  {
+    "city": "Singapore",
+    "country": "Singapore",
+    "clues": [
+      "A garden city-state in Southeast Asia.",
+      "Known for its futuristic architecture and vibrant culture."
+    ],
+    "fun_fact": [
+      "Singapore has the world's busiest port.",
+      "Chewing gum is illegal in Singapore."
+    ],
+    "trivia": [
+      "Singapore is a multi-lingual nation.",
+      "The Merlion is a mythical creature and national symbol of Singapore."
+    ],
+    "id": 95
+  },
+  {
+    "city": "Mérida",
+    "country": "Mexico",
+    "clues": [
+      "Ancient Mayan ruins nearby...",
+      "A city known for its colonial architecture and vibrant culture."
+    ],
+    "fun_fact": [
+      "Mérida is known as the 'White City' due to its many whitewashed buildings.",
+      "It boasts one of the largest and best-preserved Mayan centers, Uxmal."
+    ],
+    "trivia": [
+      "The city is home to a famous bullring.",
+      "Mérida's cuisine incorporates elements of both Mayan and Spanish traditions."
+    ],
+    "id": 96
+  },
+  {
+    "city": "Nuremberg",
+    "country": "Germany",
+    "clues": [
+      "A city with a dark history, yet vibrant today.",
+      "Home to a famous Christmas market and gingerbread."
+    ],
+    "fun_fact": [
+      "Nuremberg's castle dates back to the 11th century.",
+      "The city is known for its unique bratwurst sausages."
+    ],
+    "trivia": [
+      "The Nuremberg Trials took place here after World War II.",
+      "Albrecht Dürer, a famous Renaissance artist, was born in Nuremberg."
+    ],
+    "id": 97
+  },
+  {
+    "city": "Victoria",
+    "country": "Canada",
+    "clues": [
+      "Home to a majestic inner harbour and stunning gardens.",
+      "A city known for its British colonial influences."
+    ],
+    "fun_fact": [
+      "Victoria boasts the mildest climate in Canada.",
+      "It's home to the world's smallest desert."
+    ],
+    "trivia": [
+      "The city's name is a tribute to Queen Victoria.",
+      "Butchart Gardens is a renowned attraction."
+    ],
+    "id": 98
+  },
+  {
+    "city": "Vancouver Island",
+    "country": "Canada",
+    "clues": [
+      "A Pacific Northwest gem, known for its natural beauty.",
+      "Home to majestic forests, charming towns, and abundant wildlife."
+    ],
+    "fun_fact": [
+      "The island's name comes from Captain George Vancouver, who explored the region in the late 18th century.",
+      "It's the largest island on Canada's Pacific Coast, home to incredible biodiversity."
+    ],
+    "trivia": [
+      "The island boasts numerous hot springs.",
+      "Victoria, its capital, has a rich history as a British colonial outpost."
+    ],
+    "id": 99
+  },
+  {
+    "city": "Los Angeles",
+    "country": "United States",
+    "clues": [
+      "City of Angels, home to Hollywood dreams.",
+      "Land of sunshine, beaches, and movie stars."
+    ],
+    "fun_fact": [
+      "Los Angeles has more than 450 miles of coastline.",
+      "The Hollywood Walk of Fame has over 2,700 stars."
+    ],
+    "trivia": [
+      "Los Angeles was once known as El Pueblo de Nuestra Señora la Reina de los Ángeles.",
+      "The iconic Hollywood sign was originally built to advertise real estate."
+    ],
+    "id": 100
+  },
+  {
+    "city": "St. Petersburg",
+    "country": "Russia",
+    "clues": [
+      "Birthplace of a famous composer, home to stunning palaces.",
+      "City of canals and white nights, a bridge between East and West."
+    ],
+    "fun_fact": [
+      "It has more bridges than Venice.",
+      "The Hermitage Museum boasts one of the largest art collections in the world."
+    ],
+    "trivia": [
+      "The city was once known as Leningrad.",
+      "Peter the Great founded the city in 1703."
+    ],
+    "id": 100
+  },
+  {
+    "city": "Lucerne",
+    "country": "Switzerland",
+    "clues": [
+      "A captivating city nestled on a lake, surrounded by stunning mountains.",
+      "Famous for its Chapel Bridge and iconic Water Tower."
+    ],
+    "fun_fact": [
+      "Lucerne's Chapel Bridge is one of the oldest covered wooden bridges in Europe.",
+      "The city is known for its excellent chocolate and cheese."
+    ],
+    "trivia": [
+      "The Lion Monument in Lucerne commemorates Swiss Guards who died during the French Revolution.",
+      "Lucerne is a popular starting point for exploring the Swiss Alps."
+    ],
+    "id": 98
+  },
+  {
+    "city": "Salvador",
+    "country": "Brazil",
+    "clues": [
+      "A vibrant city known for its Afro-Brazilian culture.",
+      "Home to Pelourinho, a historic district with colorful colonial architecture."
+    ],
+    "fun_fact": [
+      "Salvador is known for its delicious acarajé, a black-eyed pea fritter.",
+      "The city boasts one of the largest urban historical centers in the Americas."
+    ],
+    "trivia": [
+      "Salvador was the first capital of Brazil.",
+      "The city is known as the 'Brazilian capital of capoeira'."
+    ],
+    "id": 99
+  },
+  {
+    "city": "Antalya",
+    "country": "Turkey",
+    "clues": [
+      "Ancient Lycian ruins meet turquoise waters.",
+      "A gateway to the Mediterranean's dramatic coast."
+    ],
+    "fun_fact": [
+      "Antalya's old town, Kaleiçi, is a maze of cobblestone streets and Ottoman-era houses.",
+      "The city boasts stunning waterfalls and natural parks."
+    ],
+    "trivia": [
+      "Antalya is a popular destination for its beautiful beaches and vibrant nightlife.",
+      "The Antalya Museum houses a significant collection of artifacts from the region's rich history."
     ],
     "id": 100
   }

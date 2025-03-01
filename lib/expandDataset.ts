@@ -24,12 +24,14 @@ async function generateDestination(index: number, usedNames: string[]) {
     - clues: array of 2 strings (cryptic hints)
     - fun_fact: array of 2 strings (interesting facts)
     - trivia: array of 2 strings (trivia tidbits)
+    - surprise: string (e.g., an image filename or fun message)
     Example: {
       "city": "Paris",
       "country": "France",
       "clues": ["This city is home to a famous tower...", "Known as the 'City of Love'..."],
       "fun_fact": ["The Eiffel Tower was supposed...", "Paris has only one stop sign..."],
-      "trivia": ["This city is famous for its croissants...", "Paris was originally a Roman city..."]
+      "trivia": ["This city is famous for its croissants...", "Paris was originally a Roman city..."],
+      "surprise": "paris-eiffel.jpg"
     }
     This is request ${index} of 100. Return ONLY a single valid JSON object, no extra text or markdown.
   `;

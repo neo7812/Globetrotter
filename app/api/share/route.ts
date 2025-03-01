@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import satori from "satori";
-const { Resvg } = await import("@resvg/resvg-js");
+//const { Resvg } = await import("@resvg/resvg-js");
 import fs from "fs/promises";
 import path from "path";
 import React from "react";
