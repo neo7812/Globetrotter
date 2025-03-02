@@ -10,9 +10,8 @@ export async function GET() {
   const funFact = destination.fun_fact[0] || "No fun fact available."; // Use first fun fact or default
   const trivia = destination.trivia[0] || "No trivia available."; // Use first trivia or default
   const correct = destination.city; // Use "city" instead of "name"
-  const surprise = destination.surprise || "// Could be an image URL, text, etc."; // Use surprise or default
   const options = generateOptions(destination, destinations);
-  return NextResponse.json({ clues, options, correct, funFact, trivia, surprise });
+  return NextResponse.json({ clues, options, correct, funFact, trivia });
 }
 
 function generateOptions(correct: any, all: any[]) {

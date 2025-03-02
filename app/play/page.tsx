@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // For animations
 import Confetti from "react-confetti";
 import Image from "next/image"; // For sad-face animation
@@ -18,6 +18,10 @@ export default function Play() {
   const shareCardRef = useRef<HTMLDivElement>(null); // Ref for generating dynamic image
   const timerRef = useRef<NodeJS.Timeout | null>(null); // Ref for timer to clear it
 
+  // Simulated list of used usernames (for demo; use backend in production)
+  const [usedUsernames, setUsedUsernames] = useState<string[]>([]); // Track used usernames in state
+  const [usernameError, setUsernameError] = useState<string | null>(null); // Error message for username
+
   // Sound effects for fun
   const [playCorrect] = useSound("/sounds/correct.mp3", { volume: 0.5 });
   const [playIncorrect] = useSound("/sounds/incorrect.mp3", { volume: 0.3 });
@@ -29,18 +33,27 @@ export default function Play() {
     }
   }, [username]);
 
+  const handleTimeout = useCallback(() => {
+    setTimerActive(false); // Stop the timer
+    if (timerRef.current) clearInterval(timerRef.current); // Clear timer
+    setSelected(null); // Ensure no option is highlighted
+    setFeedback("timeout"); // New feedback state for timeout
+    setScore((prev) => ({ ...prev, incorrect: prev.incorrect + 1 })); // Increment incorrect score
+    playIncorrect(); // Play sad sound for timeout
+  }, [playIncorrect]); // Dependencies: only playIncorrect, as it’s the only external dependency
+
   useEffect(() => {
     if (timerActive && timeLeft > 0) {
       timerRef.current = setInterval(() => {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
     } else if (timeLeft === 0) {
-      handleTimeout(); // Trigger timeout logic when timer reaches 0
+      handleTimeout(); // handleTimeout is used here
     }
     return () => {
       if (timerRef.current) clearInterval(timerRef.current); // Cleanup on unmount or reset
     };
-  }, [timerActive, timeLeft]);
+  }, [timerActive, timeLeft, handleTimeout]); // Added handleTimeout to dependencies
 
   const fetchGameData = async () => {
     const res = await fetch("/api/destination");
@@ -53,10 +66,20 @@ export default function Play() {
   };
 
   const handleStart = () => {
-    if (inputValue.trim()) {
-      setUsername(inputValue);
-      playEnter(); // Play a fun sound on start
+    if (!inputValue.trim()) return;
+
+    // Check if username is unique
+    const normalizedInput = inputValue.trim().toLowerCase();
+    if (usedUsernames.includes(normalizedInput)) {
+      setUsernameError("This username is already taken! Try another.");
+      return;
     }
+
+    // Register username, add to used list, and clear error
+    setUsername(inputValue);
+    setUsedUsernames((prev) => [...prev, normalizedInput]); // Add to tracked usernames
+    setUsernameError(null);
+    playEnter(); // Play a fun sound on start
   };
 
   const handleGuess = (guess: string) => {
@@ -77,14 +100,7 @@ export default function Play() {
     }
   };
 
-  const handleTimeout = () => {
-    setTimerActive(false); // Stop the timer
-    if (timerRef.current) clearInterval(timerRef.current); // Clear timer
-    setSelected(null); // Ensure no option is highlighted
-    setFeedback("timeout"); // New feedback state for timeout
-    setScore((prev) => ({ ...prev, incorrect: prev.incorrect + 1 })); // Increment incorrect score
-    playIncorrect(); // Play sad sound for timeout
-  };
+  
 
   const handleShare = async () => {
     if (!shareCardRef.current) return;
@@ -134,7 +150,7 @@ export default function Play() {
     const urlParams = new URLSearchParams(window.location.search);
     const invitedBy = urlParams.get("invitedBy");
     const invitedScore = urlParams.get("score");
-
+  
     if (invitedBy && invitedScore) {
       setUsername(null);
       playCorrect(); // Play a fun sound for the challenge
@@ -142,7 +158,7 @@ export default function Play() {
         `🌟 Challenge from ${invitedBy}! They scored ${invitedScore}. Can you beat it? 🌍`
       );
     }
-  }, []);
+  }, [playCorrect]); // Added playCorrect to dependencies
 
   if (!username) {
     return (
@@ -180,6 +196,11 @@ export default function Play() {
           className="p-4 border-3 border-blue-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg placeholder-white-600 z-10"
           placeholder="Enter your username"
         />
+        {usernameError && (
+          <p className="mt-2 text-red-500 text-lg font-semibold z-10">
+            {usernameError}
+          </p>
+        )}
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -197,14 +218,9 @@ export default function Play() {
     <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-blue-400 to-white relative">
       <motion.div
         style={{
-          transformOrigin: "center",
-          fontSize: "500px", // Large Earth emoji
           color: "rgba(0, 119, 255)", // Light blue, semi-transparent
-          zIndex: 0, // Behind all content
         }}
-      >
-        
-      </motion.div>
+      ></motion.div>
 
       {/* Hidden share card for dynamic image generation */}
       <div
@@ -235,10 +251,13 @@ export default function Play() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-extrabold mb-8 text-blue-800 drop-shadow-md z-10"
           >
-            Globetrotter Challenge 🌍
+            Globetrotter Challenge🌍
+            - {username} 
           </motion.h1>
           <div className="mb-8 text-center text-black bg-white p-6 rounded-lg shadow-lg max-w-2xl z-10">
-            <p className="text-2xl text-blue-700 mb-4">Time Left: {timeLeft}s</p>
+            <p className="text-2xl text-blue-700 mb-4">
+              Time Left: {timeLeft}s
+            </p>
             {gameData.clues.map((clue: string, i: number) => (
               <motion.p
                 key={i}
